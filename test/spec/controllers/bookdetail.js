@@ -6,7 +6,7 @@ describe('Controller: BookdetailCtrl', function () {
   beforeEach(module('yoTestApp'));
 
   var BookdetailCtrl,
-    scope,
+    scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
