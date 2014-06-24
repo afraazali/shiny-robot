@@ -12,7 +12,6 @@
     "angular-animate": "1.2.16",
     "angular-touch": "1.2.16",
     "angular-route": "1.2.16",
-    "angular-hal": "~0.1.5",
     "ngInfiniteScroll": "~1.1.2",
     "ngLocale": "*"
   },
