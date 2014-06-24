@@ -9,6 +9,10 @@
  */
 angular.module('yoTestApp')
   .controller('BooksearchCtrl', function ($scope, Search) {
+    console.log('----initialize search-------');
+    // Initialize Search.
+    Search.setPage(0);
+
     $scope.library = {
       totalDisplayed: 0,
       books: [],
