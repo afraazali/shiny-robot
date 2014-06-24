@@ -36,7 +36,6 @@ angular.module('yoTestApp')
 
       empty: function() {
         if ($scope.library.key === '' || $scope.library.key === null) {
-          console.log('Hello');
           $scope.library.search();
         }
       }
