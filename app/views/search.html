@@ -1,0 +1,7 @@
+<h1>Search Page</h1>
+Search: <input ng-model="library.key" name="key" type="text" ng-change="library.empty()"/><button value="Search" class="btn btn-default" ng-click="library.search()">Search!</button>
+<div class="foobar" infinite-scroll="library.nextPage()" infinite-scroll-disabled="library.busy" infinite-scroll-distance="1">
+  <div class="foobar" ng-repeat="book in library.books | limitTo: library.totalDisplayed">
+    <div class="row marketing"><a href="#/details/{{book.nid[0].value}}">{{book.title[0].value}}</a></div>
+  </div>
+</div>
