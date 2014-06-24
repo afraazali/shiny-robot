@@ -13,9 +13,10 @@ angular.module('yoTestApp')
      $http.get('/node/' + id, {headers: {'Accept': 'application/hal+json'}}).success(function(data) {
        $scope.bookInfo = {
         title: data.title[0].value,
-        body: data.body[0].value
+        body: data.body[0].value,
        };
-
+       $scope.bookInfo.publishDate = angular.isUndefined(data.field_published_date) ? 
+       								 '' : data.field_published_date[0].value;
      });
 
   }]);
