@@ -14,6 +14,7 @@ angular.module('yoTestApp')
     var _page = 0;
     var _url = '';
     var _busy = false;
+
     var makeSearchUrl = function(key) {
       _url = '/api/search-books?page=' + _page;
       if (key !== undefined || key !== '') {
@@ -55,7 +56,6 @@ angular.module('yoTestApp')
 
       makeSearchUrl(key);
       _page += 1;
-      console.log(_url);
       // Create URL.
       deferred = $q.defer();
       $http.get(_url).success(function(data) {

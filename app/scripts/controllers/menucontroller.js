@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc function
- * @name yoTestApp.controller:MenucontrollerCtrl
+ * @name yoTestApp.controller:menuController
  * @description
- * # MenucontrollerCtrl
+ * # menuController
  * Controller of the yoTestApp
  */
 angular.module('yoTestApp')
