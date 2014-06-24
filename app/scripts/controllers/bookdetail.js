@@ -8,8 +8,14 @@
  * Controller of the yoTestApp
  */
 angular.module('yoTestApp')
-  .controller('BookdetailCtrl', ['$http', '$routeParams', function ($http, $routeParams) {
-    $http.get('/node/' + $routeParams.id).success(function(data) {
-      $scope.book = data;
-    });
+  .controller('BookdetailCtrl', ['$scope' , '$http', '$routeParams', function ($scope, $http, $routeParams) {
+    var id = $routeParams.id;
+     $http.get('/node/' + id, {headers: {'Accept': 'application/hal+json'}}).success(function(data) {
+       $scope.bookInfo = {
+        title: data.title[0].value,
+        body: data.body[0].value
+       };
+
+     });
+
   }]);
